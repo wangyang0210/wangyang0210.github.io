@@ -7275,6 +7275,13 @@
       if (document.location.search.match(/type=embed/gi)) {
         window.parent.postMessage("resize", "*");
       }
+      const ageElement = document.querySelector('mark');
+    if (ageElement) {
+      const birthYear = 1996;
+      const currentYear = new Date().getFullYear();
+      const age = currentYear - birthYear;
+      ageElement.textContent = `${age} years`;
+    }
     </script>
   </head>
   <body translate="no">
